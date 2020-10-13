@@ -1,0 +1,68 @@
+﻿@model dded.db.Linkage.TblMainMenu
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>TblMainMenu</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="MenuNo" class="control-label"></label>
+                <input asp-for="MenuNo" class="form-control" />
+                <span asp-validation-for="MenuNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MenuNameTh" class="control-label"></label>
+                <input asp-for="MenuNameTh" class="form-control" />
+                <span asp-validation-for="MenuNameTh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MenuShortNameTh" class="control-label"></label>
+                <input asp-for="MenuShortNameTh" class="form-control" />
+                <span asp-validation-for="MenuShortNameTh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MenuNameEn" class="control-label"></label>
+                <input asp-for="MenuNameEn" class="form-control" />
+                <span asp-validation-for="MenuNameEn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OfficeId" class="control-label"></label>
+                <input asp-for="OfficeId" class="form-control" />
+                <span asp-validation-for="OfficeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PageAddress" class="control-label"></label>
+                <input asp-for="PageAddress" class="form-control" />
+                <span asp-validation-for="PageAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Activeflag" class="control-label"></label>
+                <input asp-for="Activeflag" class="form-control" />
+                <span asp-validation-for="Activeflag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

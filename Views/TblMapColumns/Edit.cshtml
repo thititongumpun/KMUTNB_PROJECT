@@ -1,0 +1,109 @@
+﻿@model dded.db.Linkage.TblMapColumn
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>TblMapColumn</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="SubMenu.MenuNo" class="control-label"></label>
+                <select asp-for="SubMenuId" class="form-control" asp-items="ViewBag.MenuNo"></select>
+                <span asp-validation-for="SubMenuId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ColumnName" class="control-label"></label>
+                <input asp-for="ColumnName" class="form-control" />
+                <span asp-validation-for="ColumnName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ColumnDesc" class="control-label"></label>
+                <input asp-for="ColumnDesc" class="form-control" />
+                <span asp-validation-for="ColumnDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ColumnLevel" class="control-label"></label>
+                <input asp-for="ColumnLevel" class="form-control" />
+                <span asp-validation-for="ColumnLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActiveFlag" class="control-label"></label>
+                <input asp-for="ActiveFlag" class="form-control" />
+                <span asp-validation-for="ActiveFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="No" class="control-label"></label>
+                <input asp-for="No" class="form-control" />
+                <span asp-validation-for="No" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ColumnDateFormat" class="control-label"></label>
+                <input asp-for="ColumnDateFormat" class="form-control" />
+                <span asp-validation-for="ColumnDateFormat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ColumnTimeFormat" class="control-label"></label>
+                <input asp-for="ColumnTimeFormat" class="form-control" />
+                <span asp-validation-for="ColumnTimeFormat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ColumnTimestamp" class="control-label"></label>
+                <input asp-for="ColumnTimestamp" class="form-control" />
+                <span asp-validation-for="ColumnTimestamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ColumnDateTimeFormat" class="control-label"></label>
+                <input asp-for="ColumnDateTimeFormat" class="form-control" />
+                <span asp-validation-for="ColumnDateTimeFormat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ColumnFileFormat" class="control-label"></label>
+                <input asp-for="ColumnFileFormat" class="form-control" />
+                <span asp-validation-for="ColumnFileFormat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsCitizenId" class="control-label"></label>
+                <input asp-for="IsCitizenId" class="form-control" />
+                <span asp-validation-for="IsCitizenId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartColor" class="control-label"></label>
+                <input asp-for="StartColor" class="form-control" />
+                <span asp-validation-for="StartColor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExternalLink" class="control-label"></label>
+                <input asp-for="ExternalLink" class="form-control" />
+                <span asp-validation-for="ExternalLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MoneyFormat" class="control-label"></label>
+                <input asp-for="MoneyFormat" class="form-control" />
+                <span asp-validation-for="MoneyFormat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Underline" class="control-label"></label>
+                <input asp-for="Underline" class="form-control" />
+                <span asp-validation-for="Underline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<dded.db.Linkage.TblOfficer>
+
+@{
+    ViewData["Title"] = "Officer";
+}
+
+    <h1>Officer</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CitizenId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CardId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PinCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Createdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department.DepartmentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Level)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CitizenId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PinCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Createdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActiveFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.DepartmentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level.LevelName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OfficerId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OfficerId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OfficerId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

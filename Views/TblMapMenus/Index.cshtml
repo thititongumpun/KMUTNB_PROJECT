@@ -1,0 +1,53 @@
+﻿@model IEnumerable<dded.db.Linkage.TblMapMenu>
+
+@{
+    ViewData["Title"] = "Map Menu";
+}
+
+    <h1>Map Menu</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainMenu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubMenu)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActiveFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainMenu.MenuNameTh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubMenu.MenuNameTh)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

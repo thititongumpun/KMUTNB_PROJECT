@@ -1,0 +1,89 @@
+﻿@model IEnumerable<dded.db.Linkage.TblSubmenu>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MenuNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MenuNameTh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MenuNameEn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfficeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Version)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Activeflag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceFormatType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuNameTh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuNameEn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Version)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activeflag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceFormatType)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

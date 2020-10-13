@@ -1,0 +1,127 @@
+﻿@model IEnumerable<dded.db.Linkage.TblMapColumn>
+
+@{
+    ViewData["Title"] = "Map Column";
+}
+
+    <h1>Map Column</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ColumnName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColumnDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColumnLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubMenu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColumnDateFormat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColumnTimeFormat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColumnTimestamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColumnDateTimeFormat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColumnFileFormat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCitizenId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExternalLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MoneyFormat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Underline)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColumnName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColumnDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColumnLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActiveFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubMenu.MenuNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColumnDateFormat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColumnTimeFormat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColumnTimestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColumnDateTimeFormat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColumnFileFormat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCitizenId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExternalLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoneyFormat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Underline)
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
